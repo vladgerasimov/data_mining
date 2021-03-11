@@ -35,6 +35,7 @@ DOWNLOAD_DELAY = 0.5
 # Disable cookies (enabled by default)
 COOKIES_ENABLED = True
 
+IMAGES_STORE = 'images'
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
 
@@ -65,7 +66,8 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'ula_parse.pipelines.UlaParsePipeline': 300,
+    'ula_parse.pipelines.DownloadPipeline': 200,
+    'ula_parse.pipelines.UlaParsePipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

@@ -1,6 +1,7 @@
 from scrapy.loader import ItemLoader
 from itemloaders.processors import TakeFirst, MapCompose
 from urllib.parse import urljoin
+from .items import InstagramItem
 
 
 def get_salary(salary_list):
@@ -51,3 +52,11 @@ class HhEmployerLoader(ItemLoader):
     company_url_out = TakeFirst()
     company_name_out = TakeFirst()
     description_out = get_text
+
+
+class InstagramPostLoader(ItemLoader):
+    default_item_class = InstagramItem
+
+
+class InstagramTagLoader(ItemLoader):
+    default_item_class = InstagramItem
