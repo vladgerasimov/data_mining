@@ -66,7 +66,7 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'ula_parse.pipelines.DownloadPipeline': 200,
+    # 'ula_parse.pipelines.DownloadPipeline': 200,
     'ula_parse.pipelines.UlaParsePipeline': 300,
 }
 

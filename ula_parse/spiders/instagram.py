@@ -4,6 +4,7 @@ from urllib.parse import urljoin
 from ..items import InstagramItem
 from ..loaders import InstagramPostLoader, InstagramTagLoader
 
+
 class InstagramSpider(scrapy.Spider):
     name = 'instagram'
     allowed_domains = ['www.instagram.com']
